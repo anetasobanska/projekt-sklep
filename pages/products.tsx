@@ -1,7 +1,24 @@
+import { Product } from "@/components/Product";
 import { InferGetServerSidePropsType } from "next";
 
 const ProductsPage = ({data}: InferGetServerSidePropsType<typeof getStaticProps>) => {
-    return <div>{data[0].title}</div>
+    return (
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {data.map((product) => {
+        return (
+          <li className="shadow-xl border-2" key={product.id}>
+            <Product data={{
+                title: product.title,
+              description: product.description,
+              thumbnailUrl: product.image,
+              thumbnailAlt: product.title,
+              rating: product.rating.rate,
+            }} />
+          </li>
+        );
+      })}
+    </ul>
+  );
 }
 
 export default ProductsPage;
