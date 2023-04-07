@@ -4,6 +4,7 @@ import { Main } from '../components/Main';
 import { Product } from '../components/Product';
 
 const DATA = {
+  title: 'lorem',
   description: 'A lightweight simple garment for the upper body, usually short-sleeved. A lightweight simple garment for the upper body, usually short-sleeved. A lightweight simple garment for the upper body, usually short-sleeved. A lightweight simple garment for the upper body, usually short-sleeved. A lightweight simple garment for the upper body, usually short-sleeved. A lightweight simple garment for the upper body, usually short-sleeved.',
   thumbnailUrl: 'https://picsum.photos/id/1060/536/354',
   thumbnailAlt: 'Barista nalewajacy kawe do Chemesta.',
