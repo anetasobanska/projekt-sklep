@@ -4,6 +4,10 @@ import {ActiveLink} from '../ActiveLink';
 const links = [
   {
     href: '/',
+    label: 'Home',
+  },
+  {
+    href: '/products',
     label: 'Shop',
   },
   {
@@ -34,10 +38,10 @@ interface LinkNavigationItemProps {
 const LinkNavigationItem = ({ href, label }: LinkNavigationItemProps) => {
   return (
     <li className="block">
-      <ActiveLink href={href} legacyBehavior activeClassName="text-red-700" exact={false} >
-        <a className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
-          {label}
-        </a>
+      <ActiveLink href={href} activeClassName="text-red-700" exact={false} >
+          <span className="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-red-700">
+            {label}
+          </span>
       </ActiveLink>
     </li>
   );

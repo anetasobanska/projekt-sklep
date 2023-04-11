@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import { ActiveLink } from '../ActiveLink';
 
 export const IconsNavigation = () => {
   return (
-    <div className="ml-8 flex items-center">
-      <ul className="flex items-center divide-x divide-gray-100 border-x border-gray-100">
+    <div className="ml-8 flex items-center divide-x border-transparent">
+      <ul className="flex items-center">
+        {/*  divide-x divide-gray-100 border-x border-gray-100 */}
         <IconNavigationItem
           href="/account"
           label="Account"
@@ -78,13 +78,11 @@ interface IconNavigationItemProps {
 const IconNavigationItem = ({ href, label, icon }: IconNavigationItemProps) => {
   return (
     <li className="block border-b-4 border-transparent p-6 hover:border-red-700">
-      <ActiveLink href={href} activeClassName="border-red-700" exact={false} >
-        <Link href={href} legacyBehavior >
+      <ActiveLink href={href} activeClassName="border-red-700" exact={false} >        
           <>
           {icon}
           <span className="sr-only"> {label} </span>
           </>
-        </Link>
       </ActiveLink>
     </li>
   );

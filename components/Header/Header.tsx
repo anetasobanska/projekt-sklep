@@ -3,7 +3,7 @@ import { HeaderNavigation } from './HeaderNavigation';
 
 export function Header() {
   return (
-    <header className="border-b border-gray-100">
+    <header className="border-b border-transparent">
       <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
         <div className="flex items-center">
           <button type="button" className="p-2 sm:mr-4 lg:hidden">
