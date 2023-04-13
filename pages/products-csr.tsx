@@ -1,4 +1,4 @@
-import { Product } from "@/components/Product";
+import { ProductDetails } from "@/components/Product";
 import { useQuery } from "@tanstack/react-query";
 
 const getProducts = async () => {
@@ -22,8 +22,9 @@ const ProductsCSRPage = () => {
       {data.map((product) => {
         return (
           <li className="shadow-xl border-2" key={product.id}>
-            <Product data={{
-                title: product.title,
+            <ProductDetails data={{
+              id: product.id,
+              title: product.title,
               description: product.description,
               thumbnailUrl: product.image,
               thumbnailAlt: product.title,
