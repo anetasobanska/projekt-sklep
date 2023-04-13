@@ -6,7 +6,7 @@ const AboutPage = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
-            <Main>pages / about.tsx</Main>
+            <Main>pages / contact.tsx</Main>
             <Footer />
         </div>
     );
